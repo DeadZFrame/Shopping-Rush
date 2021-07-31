@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3169681030608934752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3169681030608934758}
+  - component: {fileID: 6407588057925357317}
+  - component: {fileID: 4661806041519390966}
+  m_Layer: 0
+  m_Name: Item Assets
+  m_TagString: item
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3169681030608934758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169681030608934752}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.42, y: 2.15, z: -1.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6407588057925357317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169681030608934752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3201e62a836b74988c75657b857e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftLayer: {fileID: 0}
+  rightLayer: {fileID: 0}
+  center: {fileID: 0}
+  distanceIndex: 30
+  randomizer: 000000000100000002000000030000000400000005000000
+  spawnCount: 6
+--- !u!114 &4661806041519390966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169681030608934752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9623f8b6539bb143bd07da84ee34a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemWorld: {fileID: 8245230195873322069, guid: 2d831a94a31dc2440b0c8ce3ccd4e1ec, type: 3}
+  meat:
+  - {fileID: 7766990282252762457, guid: b8001600ed5dedc4db22ee6017a30fbe, type: 3}
+  - {fileID: 5697661676706823091, guid: f6dfa75bfdcfcbf419271bec85bb6cae, type: 3}
+  - {fileID: 5370511828961603453, guid: 9b7a73e6a5067f141a70318fa2c90c5b, type: 3}
+  - {fileID: 1590023406157671189, guid: 3e38ed7cac3d37346ab89b7fd649239c, type: 3}
+  - {fileID: 1482374171580787805, guid: 7fe14cd0b115e74409c4a5e6f483d12b, type: 3}
+  - {fileID: 3995592248883070681, guid: d0119175ef43f2241b986009fa02c1b8, type: 3}
+  milk:
+  - {fileID: 8619238014497649079, guid: cab11b64298fba643b94caf1581723a9, type: 3}
+  - {fileID: 4138903549188782296, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
+  - {fileID: 1500867434934064338, guid: 3928ec83cb8279049b04d3af0f857c26, type: 3}
+  - {fileID: 8414013103541966601, guid: 2c79e58a24a646045a084e3961de774f, type: 3}
+  - {fileID: 7178816094748785962, guid: e5af28026e3a89f4ba4d543e40e8d734, type: 3}
+  - {fileID: 7165693053300618118, guid: 9a72b7fcde029524bb16fce1ec4e627b, type: 3}
+  fruit:
+  - {fileID: 4970077749353235876, guid: 4eefe758ad532754e8d245c39bfc521b, type: 3}
+  - {fileID: 1175781055835117424, guid: a1dc8f71675900c4c9f944f3ff28f532, type: 3}
+  - {fileID: 6785563896542491917, guid: b9293a68f35f2b847829660c160d0dd5, type: 3}
+  - {fileID: 280207161974222229, guid: 9b683d7fa45d3854d9b3e337c717f602, type: 3}
+  - {fileID: 7080390779442044610, guid: 3138a4e95cc0b3c499e3a5db5da80b56, type: 3}
+  - {fileID: 7114183424504177175, guid: 16d951fe3921f3440b7af1d99aa41163, type: 3}
+  vegetable:
+  - {fileID: 5567876143854126786, guid: f1880dcb2ee9f6c469fe7fe9ac2f066d, type: 3}
+  - {fileID: 8102222968124858175, guid: 6a9e8668cb0b0aa46b800c8261a42af3, type: 3}
+  - {fileID: 3255365831584922197, guid: d31e11fd83d9176438a92aa95accbeeb, type: 3}
+  - {fileID: 6658855014648225914, guid: 5f50b53c8ca0b6f44b107a85e876e931, type: 3}
+  - {fileID: 6578748587560196977, guid: bf2328f84fa05f34b9bf82c204c4fb0b, type: 3}
+  - {fileID: 3639099611583642947, guid: 6d5b32a5b42fa5d42b95988dcfec1bbc, type: 3}
+  flour:
+  - {fileID: 4675961254419746051, guid: 6c5213242fba6074594d6b12ef0d3c9e, type: 3}
+  - {fileID: 3048406277283992741, guid: 7309e208019992b4db6a87608d5466c0, type: 3}
+  - {fileID: 7130547983663138275, guid: 25fab31b08c5deb42a45633eeb0e7249, type: 3}
+  - {fileID: 703743007389801777, guid: 2d64c7cb2b4f44545944152972e7a81d, type: 3}
+  - {fileID: 1947249266097282187, guid: 45de59939fb2f9448b6bf0b43f2ea830, type: 3}
+  - {fileID: 1225056926188399859, guid: eedad3d8496abd44fbcdc203f1884522, type: 3}
+  drinks:
+  - {fileID: 6566702596889673795, guid: 812c849c86fc0dc4bada58b4a988a06a, type: 3}
+  - {fileID: 8766282113585432141, guid: 9f751cca7dd30044e9211f3d28e1d204, type: 3}
+  - {fileID: 1615731810521500691, guid: 4586d085b0c2d4940b2fbf0a0e946e4a, type: 3}
+  - {fileID: 3196827918493859628, guid: 2754258bc1be4ec4dbe188c74211c2e3, type: 3}
+  - {fileID: 3064529869036235140, guid: d474539785cbd0b4d9703dbbd6d864e8, type: 3}
+  - {fileID: 7131310147833710065, guid: 6ba32f996ee8f4047b86c0c61ff6acd0, type: 3}
