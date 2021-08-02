@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UI_Inventory : MonoBehaviour
@@ -11,6 +12,7 @@ public class UI_Inventory : MonoBehaviour
     public TextMeshProUGUI[] itemName;
     public TextMeshProUGUI[] amount;
     public TextMeshProUGUI extraText, extraAmount;
+    public Image[] tick;
 
     public int listElements;
 
@@ -23,6 +25,7 @@ public class UI_Inventory : MonoBehaviour
         {
             itemName[i].GetComponent<TextMeshProUGUI>();
             amount[i].GetComponent<TextMeshProUGUI>();
+            tick[i].GetComponent<Image>();
         }        
     }
 
@@ -56,8 +59,27 @@ public class UI_Inventory : MonoBehaviour
         itemName[1].SetText("Egg");
         itemName[2].SetText("Bacon");
 
-        amount[0].SetText(shopping.amounts[shopping.steak].ToString());
-        amount[1].SetText(shopping.amounts[shopping.egg].ToString());
-        amount[2].SetText(shopping.amounts[shopping.bacon].ToString());
+        if (shopping.amounts[shopping.steak] > 0)
+            amount[0].SetText(shopping.amounts[shopping.steak].ToString());
+        else 
+        {
+            amount[0].gameObject.SetActive(false);
+            tick[0].enabled = true;
+        }
+
+        if (shopping.amounts[shopping.egg] > 0)
+            amount[1].SetText(shopping.amounts[shopping.egg].ToString());
+        else
+        {
+            amount[1].gameObject.SetActive(false);
+            tick[1].enabled = true;
+        }
+        if (shopping.amounts[shopping.bacon] > 0)
+            amount[2].SetText(shopping.amounts[shopping.bacon].ToString());
+        else
+        {
+            amount[1].gameObject.SetActive(false);
+            tick[1].enabled = true;
+        }
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class NextLevelUI : MonoBehaviour
 {
-    public GameObject levelStart, LevelEnd;
-    public Button playButton, nextLevelButton;
+    public GameObject levelStart, LevelEnd, pausePanel;
+    public Button playButton, nextLevelButton, pauseButton, continueButton;
     public Animator player;
 
     private void Awake()
@@ -26,6 +26,23 @@ public class NextLevelUI : MonoBehaviour
         levelStart.SetActive(false);
         playButton.gameObject.SetActive(false);
         player.enabled = true;
+        pauseButton.gameObject.SetActive(true);
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        pauseButton.gameObject.SetActive(false);
+        continueButton.gameObject.SetActive(true);
+        pausePanel.SetActive(true);
+    }
+
+    public void Continue()
+    {
+        Time.timeScale = 1f;
+        pauseButton.gameObject.SetActive(true);
+        continueButton.gameObject.SetActive(false);
+        pausePanel.SetActive(false);
     }
 
     IEnumerator Delay(float time)

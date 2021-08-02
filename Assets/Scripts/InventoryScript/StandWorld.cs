@@ -19,12 +19,14 @@ public class StandWorld : MonoBehaviour
     private MeshRenderer meshRenderer;
     private MeshFilter meshFilter;
     private Transform trans;
+    private BoxCollider coll;
 
     private void Awake()
     {
         meshFilter = GetComponent<MeshFilter>();
         meshRenderer = GetComponent<MeshRenderer>();
         trans = GetComponent<Transform>();
+        coll = GetComponent<BoxCollider>();
     }
 
     private void SetItem(Item item)
@@ -34,6 +36,7 @@ public class StandWorld : MonoBehaviour
         meshRenderer.sharedMaterials = item.GetStand().GetComponent<MeshRenderer>().sharedMaterials;
         trans.localScale = item.GetStand().GetComponent<Transform>().localScale;
         trans.rotation = item.GetStand().GetComponent<Transform>().rotation;
+
     }
 
     public Item GetItem()

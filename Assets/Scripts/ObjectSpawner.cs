@@ -132,7 +132,7 @@ public class ObjectSpawner : MonoBehaviour
 
             while (x == 0)
             {
-                if (i % 5 == 5)
+                if (i % 10 == 1)
                     regenerated = true;
 
                 if(regenerated)
@@ -175,6 +175,7 @@ public class ObjectSpawner : MonoBehaviour
             }
             standX = standX + 10f;
             x = 0;
+            firstSpawn = false;
         }
         spawnX[0] = spawnX[itemSpawnCount*sameItemSpawnCount - 1];
         spawned = true;
