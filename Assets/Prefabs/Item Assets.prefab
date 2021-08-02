@@ -112,7 +112,7 @@ MonoBehaviour:
   - {fileID: 9207527309419860076, guid: c4ccab21c0b5c41418dfccca80b45aa3, type: 3}
   - {fileID: 4312745133765018049, guid: bd4958c5f971f1d4d9afcbba3ab7da7f, type: 3}
   - {fileID: 4472500339325487983, guid: 87c5774fb2605204887148ea28d94114, type: 3}
-  - {fileID: 1999771070565414786, guid: 89c4ca62739ea2d46ab9e7ff078f898b, type: 3}
+  - {fileID: 31588383647580673, guid: 89c4ca62739ea2d46ab9e7ff078f898b, type: 3}
   - {fileID: 5452302966513964048, guid: d0d2bd859ee0de146acd9d8d1c778ff8, type: 3}
   - {fileID: 1670821947883267282, guid: de5461c112f1e5f44ae8aed5fc04a7e6, type: 3}
   standsRight:
