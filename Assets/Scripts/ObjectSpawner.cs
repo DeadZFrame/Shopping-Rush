@@ -28,6 +28,11 @@ public class ObjectSpawner : MonoBehaviour
     bool regenerated = false;
     bool firstSpawn = true;
 
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+
     private void Start()
     {
         spawnX = new float[itemSpawnCount*sameItemSpawnCount];
