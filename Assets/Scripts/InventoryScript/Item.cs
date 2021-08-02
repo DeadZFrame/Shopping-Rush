@@ -10,13 +10,20 @@ public class Item
 
         steak, bacon, egg, chicken, pork, sausage,
         coke, coffee, iceTea, water, soda, energyDrink,
-        flour, bread, cookie, donut, breadSticks, cupcake,
+        flourSack, bread, cookie, donut, breadSticks, cupcake,
         cabbage, tomato, eggplant, carrot, onion, potato,
         apple, banana, waterMelon, blueberries, strawberry, mango,
         milk, chocolateMilk, cheese, iceCream, fruitYogurt, puding,
     }
+
+    public enum StandTypes
+    {
+        drinkFridgeL, fruitStandL, meatStandL, milkFridgeL, vegetableStandL, flourStandL,
+        drinkFridgeR, fruitStandR, meatStandR, milkFridgeR, vegetableStandR, flourStandR,
+    }
     public ItemTypes itemTypes;
-    public int itemAmount;
+    public StandTypes standTypes;
+
     public GameObject GetGameObject()
     {
         switch (itemTypes)
@@ -34,7 +41,7 @@ public class Item
             case ItemTypes.iceTea: return ItemAssets.Instance.drinks[3];
             case ItemTypes.water: return ItemAssets.Instance.drinks[4];
             case ItemTypes.energyDrink: return ItemAssets.Instance.drinks[5];
-            case ItemTypes.flour: return ItemAssets.Instance.flour[0];
+            case ItemTypes.flourSack: return ItemAssets.Instance.flour[0];
             case ItemTypes.bread: return ItemAssets.Instance.flour[1];
             case ItemTypes.cookie: return ItemAssets.Instance.flour[2];
             case ItemTypes.donut: return ItemAssets.Instance.flour[3];
@@ -58,6 +65,26 @@ public class Item
             case ItemTypes.iceCream: return ItemAssets.Instance.milk[3];
             case ItemTypes.fruitYogurt: return ItemAssets.Instance.milk[4];
             case ItemTypes.puding: return ItemAssets.Instance.milk[5];
+        }
+    }
+
+    public GameObject GetStand()
+    {
+        switch (standTypes)
+        {
+            default:
+            case StandTypes.drinkFridgeL: return ItemAssets.Instance.standsLeft[0];
+            case StandTypes.fruitStandL: return ItemAssets.Instance.standsLeft[1];
+            case StandTypes.meatStandL: return ItemAssets.Instance.standsLeft[2];
+            case StandTypes.milkFridgeL: return ItemAssets.Instance.standsLeft[3];
+            case StandTypes.vegetableStandL: return ItemAssets.Instance.standsLeft[4];
+            case StandTypes.flourStandL: return ItemAssets.Instance.standsLeft[5];
+            case StandTypes.drinkFridgeR: return ItemAssets.Instance.standsRight[0];
+            case StandTypes.fruitStandR: return ItemAssets.Instance.standsRight[1];
+            case StandTypes.meatStandR: return ItemAssets.Instance.standsRight[2];
+            case StandTypes.milkFridgeR: return ItemAssets.Instance.standsRight[3];
+            case StandTypes.vegetableStandR: return ItemAssets.Instance.standsRight[4];
+            case StandTypes.flourStandR: return ItemAssets.Instance.standsRight[5];
         }
     }
 }

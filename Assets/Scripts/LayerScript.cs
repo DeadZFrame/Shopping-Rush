@@ -8,7 +8,7 @@ public class LayerScript : MonoBehaviour
     public Vector3 offset;
     Vector3 centerPos, leftLayerPos, rightLayerPos;
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         centerPos = center.position;
         leftLayerPos = centerPos + offset;

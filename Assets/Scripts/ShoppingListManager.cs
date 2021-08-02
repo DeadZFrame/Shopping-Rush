@@ -63,8 +63,6 @@ public class ShoppingListManager : MonoBehaviour
         if (timesCollided == 1 && notEqual == 1)
             notEqual = 0;
         timesCollided = 0;
-        Debug.Log(timesCollided);
-        Debug.Log(notEqual);
 
         if (other.name.Equals("Steak"))
             amounts[steak]--;    
@@ -141,7 +139,7 @@ public class ShoppingListManager : MonoBehaviour
             amounts[iceCream]--;
         if (other.name.Equals("Fruit Yogurt"))
             amounts[fruitYogurt]--;
-        if (other.name.Equals("Puding"))
+        if (other.name.Equals("Pudding"))
             amounts[puding]--;
     }
 }

@@ -12,6 +12,7 @@ public class ItemAssets : MonoBehaviour
     }
 
     public Transform itemWorld;
+    public Transform standWorld;
 
     public GameObject[] meat;
     public GameObject[] milk;
@@ -19,4 +20,6 @@ public class ItemAssets : MonoBehaviour
     public GameObject[] vegetable;
     public GameObject[] flour;
     public GameObject[] drinks;
+    public GameObject[] standsLeft;
+    public GameObject[] standsRight;
 }

@@ -38,6 +38,12 @@ public class ItemWorld : MonoBehaviour
         coll.size= item.GetGameObject().GetComponent<BoxCollider>().size;
         Rename();
 
+        //meshFilter.sharedMesh = item.GetStand().GetComponent<MeshFilter>().sharedMesh;                    !!!BÜyÜcÜlÜk kodudur!!! Lütfen açmayýnýz!
+        //meshRenderer.sharedMaterials = item.GetStand().GetComponent<MeshRenderer>().sharedMaterials;
+        //trans.localScale = item.GetStand().GetComponent<Transform>().localScale;
+        //trans.rotation = item.GetStand().GetComponent<Transform>().rotation;
+        
+
         //gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x-90, gameObject.transform.eulerAngles.y+180, gameObject.transform.eulerAngles.z+15);
     }
 
@@ -100,7 +106,7 @@ public class ItemWorld : MonoBehaviour
             coll.name = "Banana";
         if (meshName.name.Equals("mango"))
             coll.name = "Mango";
-        if (meshName.name.Equals("stawberry"))
+        if (meshName.name.Equals("strawberry"))
             coll.name = "Strawberry";
         if (meshName.name.Equals("watermelon"))
             coll.name = "Watermelon";
@@ -118,8 +124,8 @@ public class ItemWorld : MonoBehaviour
             coll.name = "Ice Cream";
         if (meshName.name.Equals("milk"))
             coll.name = "Milk";
-        if (meshName.name.Equals("puding"))
-            coll.name = "Puding";
+        if (meshName.name.Equals("pudding"))
+            coll.name = "Pudding";
 
         if (meshName.name.Equals("cabbage"))
             coll.name = "Cabbage";

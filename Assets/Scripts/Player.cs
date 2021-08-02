@@ -7,43 +7,56 @@ public class Player : MonoBehaviour
 {
     LayerScript layerScript;
     ObjectSpawner @object;
-    Item item;
+    NextLevelUI uI;
+    LevelLoader level;
 
     private RaycastHit hit;
 
     public float speed;
     public float smoothSpeed = 0.125f;
+    public float delayTime = 1f;
 
     private Transform temp; //swipe için temporary deðer
 
     private bool touching = false;
     private bool toLeft, toRight, leftToCenter, rightToCenter = false;
 
+
     private Vector2 startpos, direction; //Touch kontrol için dokunma baþlangýcý ve bitiþ deðerleri
     private float touchDirection;
 
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
-
+    
     private void Start()
     {
-        layerScript = GameObject.Find("Layers").GetComponent<LayerScript>();
-        @object = GameObject.Find("Item Assets").GetComponent<ObjectSpawner>();
         temp = layerScript.center;
     }
 
     private void Awake()
     {
+        layerScript = GameObject.Find("Layers").GetComponent<LayerScript>();
+        @object = GameObject.Find("Item Assets").GetComponent<ObjectSpawner>();
+        uI = GameObject.Find("LevelManager").GetComponent<NextLevelUI>();
+        level = GameObject.Find("LevelManager").GetComponent<LevelLoader>();
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
     }
 
     private void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        if (!uI.levelStart.activeInHierarchy)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
+        
         TouchControls();
-        Swipe();
         //RayCast();
+    }
+
+    private void FixedUpdate()
+    {
+        Swipe();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,6 +66,13 @@ public class Player : MonoBehaviour
         {
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
+        }
+
+        if (other.name.Equals("Finish"))
+        {
+            level.sceneIndex++;
+            uI.LevelEnd.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -71,22 +91,22 @@ public class Player : MonoBehaviour
                 case TouchPhase.Moved:
                     direction = touch.position - startpos;
                     touchDirection = direction.x;
-                    if (touchDirection < -50f && temp == layerScript.center && !touching)
+                    if (touchDirection < -50f && temp == layerScript.center && !touching && !leftToCenter && !rightToCenter && !toLeft && !toRight)
                     {
                         touching = true;
                         toLeft = true;
                     }
-                    else if (touchDirection > 50f && temp == layerScript.center && !touching)
+                    else if (touchDirection > 50f && temp == layerScript.center && !touching && !leftToCenter && !rightToCenter && !toLeft && !toRight)
                     {
                         touching = true;
                         toRight = true;
                     }
-                    else if(touchDirection < -50f && temp == layerScript.rightLayer && !touching)
+                    else if(touchDirection < -50f && temp == layerScript.rightLayer && !touching && !leftToCenter && !rightToCenter && !toLeft && !toRight)
                     {
                         touching = true;
                         rightToCenter = true;
                     }
-                    else if(touchDirection > 50f && temp == layerScript.leftLayer && !touching)
+                    else if(touchDirection > 50f && temp == layerScript.leftLayer && !touching && !leftToCenter && !rightToCenter && !toLeft && !toRight)
                     {
                         touching = true;
                         leftToCenter = true;
@@ -112,21 +132,25 @@ public class Player : MonoBehaviour
         {
             transform.position = smoothToLeft;
             temp = layerScript.leftLayer;
+            StartCoroutine(DelayStatementExit(delayTime));
         }
         else if (toRight)
         {
             transform.position = smoothToRight;
             temp = layerScript.rightLayer;
+            StartCoroutine(DelayStatementExit(delayTime));
         }
         else if (rightToCenter)
         {
             transform.position = smoothToCenter;
             temp = layerScript.center;
+            StartCoroutine(DelayStatementExit(delayTime));
         }
         else if (leftToCenter)
         {
             transform.position = smoothToCenter;
             temp = layerScript.center;
+            StartCoroutine(DelayStatementExit(delayTime));
         }
     }
 
@@ -142,5 +166,18 @@ public class Player : MonoBehaviour
                 @object.IntersectFix();
             StartCoroutine(@object.DelayAction(0.2f));
         }
+    }
+
+    IEnumerator DelayStatementExit(float time)
+    {
+        yield return new WaitForSeconds(time);
+        if (toLeft)
+            toLeft = false;
+        if (toRight)
+            toRight = false;
+        if (rightToCenter)
+            rightToCenter = false;
+        if (leftToCenter)
+            leftToCenter = false;
     }
 }
