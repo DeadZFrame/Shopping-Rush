@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class SavePlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+//    public int level;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+//    public void Save()
+//    {
+//        SaveSystem.SavePlayer(this);
+//    }
 }
