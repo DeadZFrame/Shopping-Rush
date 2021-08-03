@@ -1440,6 +1440,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 543450653444486866}
+    - target: {fileID: 2750913851648474425, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2750913851674715169, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1763,6 +1767,10 @@ PrefabInstance:
       propertyPath: uI
       value: 
       objectReference: {fileID: 1368846211}
+    - target: {fileID: 5597402735758219606, guid: 6133a41c4bc0f8440809f7adf6f7e5a5, type: 3}
+      propertyPath: delayTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5597402735758219606, guid: 6133a41c4bc0f8440809f7adf6f7e5a5, type: 3}
       propertyPath: uiInventory
       value: 

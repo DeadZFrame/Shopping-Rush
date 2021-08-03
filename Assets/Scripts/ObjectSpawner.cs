@@ -18,8 +18,8 @@ public class ObjectSpawner : MonoBehaviour
     Vector3 position, standPosition;
 
     public int itemSpawnCount, sameItemSpawnCount, sameStandSpawnCount, standSpawnCount;
-    private int x, z = 0;
-    private int sameItemSpawnCountControl, sameStandSpawnCountControl = 1;
+    private int x = 0, z = 0;
+    private int sameItemSpawnCountControl = 1, sameStandSpawnCountControl = 1;
 
     [System.NonSerialized]
     public bool spawned, _fixed = false;
@@ -98,60 +98,60 @@ public class ObjectSpawner : MonoBehaviour
             }
             else
             {
-                switch (i)
-                {
-                    case 0: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.chicken }); break;
-                    case 1: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.bacon }); break;
-                    case 2: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.sausage }); break;
-                    case 3: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.steak }); break;
-                    case 4: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.egg }); break;
-                    case 5: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.pork }); break;
+                //switch (i)
+                //{
+                //    case 0: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.chicken }); break;
+                //    case 1: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.bacon }); break;
+                //    case 2: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.sausage }); break;
+                //    case 3: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.steak }); break;
+                //    case 4: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.egg }); break;
+                //    case 5: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.pork }); break;
 
-                    case 6: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.apple }); break;
-                    case 7: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.banana }); break;
-                    case 8: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.blueberries }); break;
-                    case 9: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.mango }); break;
-                    case 10: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.strawberry }); break;
-                    case 11: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.waterMelon }); break;
+                //    case 6: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.apple }); break;
+                //    case 7: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.banana }); break;
+                //    case 8: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.blueberries }); break;
+                //    case 9: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.mango }); break;
+                //    case 10: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.strawberry }); break;
+                //    case 11: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.waterMelon }); break;
 
-                    case 12: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.tomato }); break;
-                    case 13: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.potato }); break;
-                    case 14: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.onion }); break;
-                    case 15: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.eggplant }); break;
-                    case 16: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.carrot }); break;
-                    case 17: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cabbage }); break;
+                //    case 12: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.tomato }); break;
+                //    case 13: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.potato }); break;
+                //    case 14: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.onion }); break;
+                //    case 15: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.eggplant }); break;
+                //    case 16: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.carrot }); break;
+                //    case 17: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cabbage }); break;
 
-                    case 18: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.water }); break;
-                    case 19: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.coffee }); break;
-                    case 20: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.coke }); break;
-                    case 21: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.energyDrink }); break;
-                    case 22: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.iceTea }); break;
-                    case 23: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.soda }); break;
+                //    case 18: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.water }); break;
+                //    case 19: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.coffee }); break;
+                //    case 20: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.coke }); break;
+                //    case 21: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.energyDrink }); break;
+                //    case 22: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.iceTea }); break;
+                //    case 23: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.soda }); break;
 
-                    case 24: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.puding }); break;
-                    case 25: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.milk }); break;
-                    case 26: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.iceCream }); break;
-                    case 27: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.fruitYogurt }); break;
-                    case 28: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.chocolateMilk }); break;
-                    case 29: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cheese }); break;
+                //    case 24: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.puding }); break;
+                //    case 25: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.milk }); break;
+                //    case 26: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.iceCream }); break;
+                //    case 27: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.fruitYogurt }); break;
+                //    case 28: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.chocolateMilk }); break;
+                //    case 29: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cheese }); break;
 
-                    case 30: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.bread }); break;
-                    case 31: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.breadSticks }); break;
-                    case 32: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cookie }); break;
-                    case 33: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cupcake }); break;
-                    case 34: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.donut }); break;
-                    case 35: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.flourSack }); break;
+                //    case 30: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.bread }); break;
+                //    case 31: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.breadSticks }); break;
+                //    case 32: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cookie }); break;
+                //    case 33: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cupcake }); break;
+                //    case 34: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.donut }); break;
+                //    case 35: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.flourSack }); break;
 
-                    case 36: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.fruitStand }); break;
-                    case 37: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.vegetableStand }); break;
-                    case 38: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.drinkFridge }); break;
-                    case 39: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.milkFridge }); break;
-                    case 40: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.flourStand }); break;
-                    case 41: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.meatStand }); break;
+                //    case 36: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.fruitStand }); break;
+                //    case 37: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.vegetableStand }); break;
+                //    case 38: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.drinkFridge }); break;
+                //    case 39: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.milkFridge }); break;
+                //    case 40: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.flourStand }); break;
+                //    case 41: StandWorld.SpawnStandWorld(position, new Item { standTypes = Item.StandTypes.meatStand }); break;
 
-                    default:
-                        break;
-                }
+                //    default:
+                //        break;
+                //}
             }
             
             if (i == itemSpawnCount - 1 && sameItemSpawnCountControl < sameItemSpawnCount)
@@ -183,8 +183,6 @@ public class ObjectSpawner : MonoBehaviour
                 y = -1;
             }
         }
-        z = 0;
-        x = 0;
         spawned = true;
     }
 

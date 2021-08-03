@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     private bool touching = false;
     private bool toLeft, toRight, leftToCenter, rightToCenter = false;
+    private bool left = false, right = false, center = false;
 
 
     private Vector2 startpos, direction; //Touch kontrol için dokunma baþlangýcý ve bitiþ deðerleri
@@ -131,28 +132,43 @@ public class Player : MonoBehaviour
 
         if (toLeft)
         {
-            transform.position = smoothToLeft;
             temp = layerScript.leftLayer;
             StartCoroutine(DelayStatementExit(delayTime));
+            toLeft = false;
+            left = true;
+            center = false;
         }
         else if (toRight)
         {
-            transform.position = smoothToRight;
             temp = layerScript.rightLayer;
             StartCoroutine(DelayStatementExit(delayTime));
+            toRight = false;
+            right = true;
+            center = false;
         }
         else if (rightToCenter)
         {
-            transform.position = smoothToCenter;
             temp = layerScript.center;
             StartCoroutine(DelayStatementExit(delayTime));
+            rightToCenter = false;
+            center = true;
+            left = false; right = false;
         }
         else if (leftToCenter)
         {
-            transform.position = smoothToCenter;
             temp = layerScript.center;
             StartCoroutine(DelayStatementExit(delayTime));
+            leftToCenter = false;
+            center = true;
+            left = false; right = false;
         }
+
+        if(left)
+            transform.position = smoothToLeft;
+        if(right)
+            transform.position = smoothToRight;
+        if(center)
+            transform.position = smoothToCenter;
     }
 
     public void RayCast()
@@ -172,13 +188,11 @@ public class Player : MonoBehaviour
     IEnumerator DelayStatementExit(float time)
     {
         yield return new WaitForSeconds(time);
-        if (toLeft)
-            toLeft = false;
-        if (toRight)
-            toRight = false;
-        if (rightToCenter)
-            rightToCenter = false;
-        if (leftToCenter)
-            leftToCenter = false;
+        if (right)
+            right = false;
+        if (left)
+            left = false;
+        if (center)
+            center = false;
     }
 }
