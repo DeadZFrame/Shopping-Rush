@@ -18,8 +18,7 @@ public class Item
 
     public enum StandTypes
     {
-        drinkFridgeL, fruitStandL, meatStandL, milkFridgeL, vegetableStandL, flourStandL,
-        drinkFridgeR, fruitStandR, meatStandR, milkFridgeR, vegetableStandR, flourStandR,
+        drinkFridge, fruitStand, meatStand, milkFridge, vegetableStand, flourStand
     }
     public ItemTypes itemTypes;
     public StandTypes standTypes;
@@ -73,18 +72,12 @@ public class Item
         switch (standTypes)
         {
             default:
-            case StandTypes.drinkFridgeL: return ItemAssets.Instance.standsLeft[0];
-            case StandTypes.fruitStandL: return ItemAssets.Instance.standsLeft[1];
-            case StandTypes.meatStandL: return ItemAssets.Instance.standsLeft[2];
-            case StandTypes.milkFridgeL: return ItemAssets.Instance.standsLeft[3];
-            case StandTypes.vegetableStandL: return ItemAssets.Instance.standsLeft[4];
-            case StandTypes.flourStandL: return ItemAssets.Instance.standsLeft[5];
-            case StandTypes.drinkFridgeR: return ItemAssets.Instance.standsRight[0];
-            case StandTypes.fruitStandR: return ItemAssets.Instance.standsRight[1];
-            case StandTypes.meatStandR: return ItemAssets.Instance.standsRight[2];
-            case StandTypes.milkFridgeR: return ItemAssets.Instance.standsRight[3];
-            case StandTypes.vegetableStandR: return ItemAssets.Instance.standsRight[4];
-            case StandTypes.flourStandR: return ItemAssets.Instance.standsRight[5];
+            case StandTypes.drinkFridge: return ItemAssets.Instance.stands[0];
+            case StandTypes.fruitStand: return ItemAssets.Instance.stands[1];
+            case StandTypes.meatStand: return ItemAssets.Instance.stands[2];
+            case StandTypes.milkFridge: return ItemAssets.Instance.stands[3];
+            case StandTypes.vegetableStand: return ItemAssets.Instance.stands[4];
+            case StandTypes.flourStand: return ItemAssets.Instance.stands[5];
         }
     }
 }

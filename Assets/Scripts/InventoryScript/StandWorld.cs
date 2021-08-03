@@ -36,6 +36,9 @@ public class StandWorld : MonoBehaviour
         meshRenderer.sharedMaterials = item.GetStand().GetComponent<MeshRenderer>().sharedMaterials;
         trans.localScale = item.GetStand().GetComponent<Transform>().localScale;
         trans.rotation = item.GetStand().GetComponent<Transform>().rotation;
+        item.GetStand().AddComponent<BoxCollider>();
+        coll.size = item.GetStand().GetComponent<BoxCollider>().size;
+        coll.center = item.GetStand().GetComponent<BoxCollider>().center;
 
     }
 

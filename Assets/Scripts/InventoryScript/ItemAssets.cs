@@ -20,6 +20,5 @@ public class ItemAssets : MonoBehaviour
     public GameObject[] vegetable;
     public GameObject[] flour;
     public GameObject[] drinks;
-    public GameObject[] standsLeft;
-    public GameObject[] standsRight;
+    public GameObject[] stands;
 }

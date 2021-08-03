@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
 
         if (other.name.Equals("Finish"))
         {
+            FindObjectOfType<AudioManager>().Play("kaching");
             level.sceneIndex++;
             uI.LevelEnd.SetActive(true);
             Time.timeScale = 0;

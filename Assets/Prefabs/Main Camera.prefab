@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cart: {fileID: 0}
-  smoothSpeed: 0.5
+  smoothSpeed: 0.7
   offset: {x: -1, y: 4, z: 0}
 --- !u!54 &6771306419275041970
 Rigidbody:
