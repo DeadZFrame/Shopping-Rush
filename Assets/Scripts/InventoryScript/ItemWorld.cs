@@ -38,6 +38,7 @@ public class ItemWorld : MonoBehaviour
         coll.size= item.GetGameObject().GetComponent<BoxCollider>().size;
         Rename();
 
+
         //meshFilter.sharedMesh = item.GetStand().GetComponent<MeshFilter>().sharedMesh;                    !!!BÜyÜcÜlÜk kodudur!!! Lütfen açmayýnýz!
         //meshRenderer.sharedMaterials = item.GetStand().GetComponent<MeshRenderer>().sharedMaterials;
         //trans.localScale = item.GetStand().GetComponent<Transform>().localScale;

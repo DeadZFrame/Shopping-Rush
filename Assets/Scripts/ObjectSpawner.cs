@@ -191,9 +191,9 @@ public class ObjectSpawner : MonoBehaviour
         for(int i = 0; i < spawnX.Length; i++)
         {
             if(i == 0)
-                spawnX[i] = Random.Range(distanceIndex-20, distanceIndex);
+                spawnX[i] = Random.Range(distanceIndex-5, distanceIndex);
             else
-                spawnX[i] = spawnX[i - 1] + Random.Range(distanceIndex-20, distanceIndex);
+                spawnX[i] = spawnX[i - 1] + Random.Range(distanceIndex-10, distanceIndex);
         }
 
         for(int i = 0; i < randomX.Length; i++)
