@@ -18,8 +18,7 @@ public class ShoppingListManager : MonoBehaviour
         apple, banana, waterMelon, blueberries, strawberry, mango,
         milk, chocolateMilk, cheese, iceCream, fruitYogurt, puding;
 
-    [System.NonSerialized] public int extras;
-    private int notEqual, timesCollided = 0;
+    [System.NonSerialized] public float money, infliation, price;
 
     private void Start()
     {
@@ -42,104 +41,212 @@ public class ShoppingListManager : MonoBehaviour
         milk = 30; chocolateMilk = 31; cheese = 32; iceCream = 33; fruitYogurt = 34; puding = 35;
     }
 
+    public void SetUI(UI_Inventory uI)
+    {
+        this.uI = uI;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        timesCollided++;
-        for (int i = 0; i < uI.listElements-1 ; i++)
-        {
-            if (!uI.itemName[i].text.Equals(other.name))
-            {
-                notEqual++; 
-            }
-            if (notEqual == 2)
-            {
-                extras++;
-                uI.extraText.gameObject.SetActive(true);
-                uI.extraAmount.gameObject.SetActive(true);
-                uI.extraAmount.SetText("(" + extras.ToString() + ")");
-                notEqual = 0;
-            }
-        }
-        if (timesCollided == 1 && notEqual == 1)
-            notEqual = 0;
-        timesCollided = 0;
-
+        
         if (other.name.Equals("Steak"))
-            amounts[steak]--;    
+        {
+            amounts[steak]--;
+            price = 10f;
+        }
         if (other.name.Equals("Bacon"))
+        {
+            price = 5f;
             amounts[bacon]--;
+        }
         if (other.name.Equals("Egg"))
+        {
             amounts[egg]--;
+            price = 0.5f;
+        }
         if (other.name.Equals("Chicken"))
+        {
             amounts[chicken]--;
+            price = 10f;
+        }
         if (other.name.Equals("Pork"))
+        {
             amounts[pork]--;
+            price = 7f;
+        }
         if (other.name.Equals("Sausage"))
+        {
             amounts[sausage]--;
+            price = 3f;
+        }
+
 
         if (other.name.Equals("Coke"))
+        {
             amounts[coke]--;
+            price = 2f;
+        }
         if (other.name.Equals("Coffee"))
+        {
             amounts[coffee]--;
+            price = 1.5f;
+        }
         if (other.name.Equals("Ice Tea"))
+        {
             amounts[iceTea]--;
+            price = 2f;
+        }
         if (other.name.Equals("Water"))
+        {
             amounts[water]--;
+            price = 0.5f;
+        }
         if (other.name.Equals("Soda"))
+        {
             amounts[soda]--;
+            price = 2f;
+        }
         if (other.name.Equals("Energy Drink"))
+        {
             amounts[energyDrink]--;
+            price = 4f;
+        }
+
 
         if (other.name.Equals("Flour"))
+        {
             amounts[flour]--;
+            price = 1f;
+        } 
         if (other.name.Equals("Bread"))
+        {
             amounts[bread]--;
+            price = 2.50f;
+        }
         if (other.name.Equals("Cookie"))
+        {
             amounts[cookie]--;
+            price = 4f;
+        }     
         if (other.name.Equals("Donut"))
+        {
             amounts[donut]--;
+            price = 5f;
+        }    
         if (other.name.Equals("Breadsticks"))
+        {
             amounts[breadSticks]--;
+            price = 3f;
+        }  
         if (other.name.Equals("Cupcake"))
+        {
             amounts[cupcake]--;
+            price = 3f;
+        }
+            
 
         if (other.name.Equals("Cabbage"))
+        {
             amounts[cabbage]--;
+            price = 1f;
+        }
         if (other.name.Equals("Tomato"))
+        {
             amounts[tomato]--;
+            price = 1f;
+        }
         if (other.name.Equals("Eggplant"))
+        {
             amounts[eggplant]--;
+            price = 1f;
+        }
         if (other.name.Equals("Carrot"))
+        {
             amounts[carrot]--;
+            price = 1f;
+        }   
         if (other.name.Equals("Onion"))
+        {
             amounts[onion]--;
+            price = 1f;
+        }     
         if (other.name.Equals("Potato"))
+        {
             amounts[potato]--;
+            price = 1f;
+        }
+            
 
         if (other.name.Equals("Apple"))
+        {
             amounts[apple]--;
+            price = 1f;
+        }      
         if (other.name.Equals("Banana"))
+        {
             amounts[banana]--;
+            price = 1f;
+        }    
         if (other.name.Equals("Watermelon"))
+        {
             amounts[waterMelon]--;
+            price = 1f;
+        }
         if (other.name.Equals("Blueberries"))
+        {
             amounts[blueberries]--;
+            price = 1f;
+        }
         if (other.name.Equals("Strawberry"))
+        {
             amounts[strawberry]--;
+            price = 1f;
+        }
         if (other.name.Equals("Mango"))
+        {
             amounts[mango]--;
+            price = 1f;
+        }
+            
 
         if (other.name.Equals("Milk"))
+        {
             amounts[milk]--;
+            price = 2f;
+        }
         if (other.name.Equals("Chocolate Milk"))
+        {
             amounts[chocolateMilk]--;
+            price = 2f;
+        }
         if (other.name.Equals("Cheese"))
+        {
             amounts[cheese]--;
+            price = 2f;
+        }
         if (other.name.Equals("Ice Cream"))
+        {
             amounts[iceCream]--;
+            price = 2f;
+        }
         if (other.name.Equals("Fruit Yogurt"))
+        {
             amounts[fruitYogurt]--;
+            price = 2f;
+        }
         if (other.name.Equals("Pudding"))
+        {
             amounts[puding]--;
+            price = 2f;
+        }
+
+        if (other.tag.Equals("item"))
+        {
+            uI.floatingText.gameObject.SetActive(false);
+            uI.floatingText.gameObject.SetActive(true);
+            uI.floatingText.SetText("-" + price.ToString());
+        }
+        money -= price;
+        price = 0f;
     }
 }

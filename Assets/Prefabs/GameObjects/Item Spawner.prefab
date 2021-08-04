@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    itemTypes: 14
+    itemTypes: 3
     standTypes: 0

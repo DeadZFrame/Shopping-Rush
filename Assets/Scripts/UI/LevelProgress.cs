@@ -18,7 +18,8 @@ public class LevelProgress : MonoBehaviour
     }
     public void CalculateDistance()
     {
-        distance = Vector3.Distance(player.position, finish.position);
-        normalizedDistance = Mathf.InverseLerp(player.position.x, finish.position.x, distance);
+        float distance = player.position.x / finish.position.x;
+
+        slider.value = distance;
     }
 }

@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public float delayTime = 1f;
 
     private Transform temp; //swipe için temporary deðer
-    public SkinnedMeshRenderer mesh;
+    public GameObject cube;
 
     private bool touching = false;
     private bool toLeft, toRight, leftToCenter, rightToCenter = false;
@@ -41,7 +41,6 @@ public class Player : MonoBehaviour
         @object = GameObject.Find("Item Assets").GetComponent<ObjectSpawner>();
         uI = GameObject.Find("LevelManager").GetComponent<NextLevelUI>();
         level = GameObject.Find("LevelManager").GetComponent<LevelLoader>();
-        mesh.material = GameObject.Find("Cube").GetComponent<SkinnedMeshRenderer>().material;
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
     }
@@ -81,13 +80,10 @@ public class Player : MonoBehaviour
 
         if (other.tag.Equals("Stand"))
         {
-            for(float i = 0; i < 1.6f; i += 0.4f)
+            for(float i = 0; i < 1.2f; i += 0.3f)
             {
                 StartCoroutine(DelayAlphaChange(i));
-                Debug.Log(mesh.material.color);
             }
-            mesh.material.color = new Color(255, 0, 0, 255);
-
         }
     }
 
@@ -212,13 +208,13 @@ public class Player : MonoBehaviour
     IEnumerator DelayAlphaChange(float time)
     {
         yield return new WaitForSeconds(time);
-        if(mesh.material.color.a == 0)
+        if(!cube.activeInHierarchy)
         {
-            mesh.material.color = new Color(255, 0, 0, 255);
+            cube.SetActive(true);
         }
         else
         {
-            mesh.material.color = new Color(255, 0, 0, 0);
+            cube.SetActive(false);
         }
     }
 }
