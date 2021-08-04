@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
 
         if (other.tag.Equals("Stand"))
         {
-            for(float i = 0; i < 0.8f; i += 0.2f)
+            for(float i = 0; i < 1.6f; i += 0.4f)
             {
                 StartCoroutine(DelayAlphaChange(i));
                 Debug.Log(mesh.material.color);

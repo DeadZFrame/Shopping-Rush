@@ -48,38 +48,41 @@ public class UI_Inventory : MonoBehaviour
 
     public void ShoppingList()
     {
-        shopping.amounts[shopping.steak] = 1;
-        shopping.amounts[shopping.egg] = 1;
-        shopping.amounts[shopping.bacon] = 1;
+        shopping.amounts[shopping.apple] = 1;
+        shopping.amounts[shopping.cabbage] = 1;
+        shopping.amounts[shopping.strawberry] = 1;
     }
 
     public void ShoppingListToUI()
     {
-        itemName[0].SetText("Steak");
-        itemName[1].SetText("Egg");
-        itemName[2].SetText("Bacon");
+        itemName[0].gameObject.SetActive(true);
+        itemName[1].gameObject.SetActive(true);
+        itemName[2].gameObject.SetActive(true);
+        itemName[0].SetText("Apple");
+        itemName[1].SetText("Cabbage");
+        itemName[2].SetText("Strawberry");
 
-        if (shopping.amounts[shopping.steak] > 0)
-            amount[0].SetText(shopping.amounts[shopping.steak].ToString());
+        if (shopping.amounts[shopping.apple] > 0)
+            amount[0].SetText(shopping.amounts[shopping.apple].ToString());
         else 
         {
             amount[0].gameObject.SetActive(false);
             tick[0].enabled = true;
         }
 
-        if (shopping.amounts[shopping.egg] > 0)
-            amount[1].SetText(shopping.amounts[shopping.egg].ToString());
+        if (shopping.amounts[shopping.cabbage] > 0)
+            amount[1].SetText(shopping.amounts[shopping.cabbage].ToString());
         else
         {
             amount[1].gameObject.SetActive(false);
             tick[1].enabled = true;
         }
-        if (shopping.amounts[shopping.bacon] > 0)
-            amount[2].SetText(shopping.amounts[shopping.bacon].ToString());
+        if (shopping.amounts[shopping.strawberry] > 0)
+            amount[2].SetText(shopping.amounts[shopping.strawberry].ToString());
         else
         {
-            amount[1].gameObject.SetActive(false);
-            tick[1].enabled = true;
+            amount[2].gameObject.SetActive(false);
+            tick[2].enabled = true;
         }
     }
 }
