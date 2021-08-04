@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
             {
                 StartCoroutine(DelayAlphaChange(i));
             }
+            
         }
     }
 

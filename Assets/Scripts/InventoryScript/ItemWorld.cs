@@ -55,7 +55,7 @@ public class ItemWorld : MonoBehaviour
 
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void Rename()
