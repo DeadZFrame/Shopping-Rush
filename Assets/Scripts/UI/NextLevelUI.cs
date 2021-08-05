@@ -12,7 +12,7 @@ public class NextLevelUI : MonoBehaviour
     public Button restartButton,nextLevel;
     public Animator player;
     public TextMeshProUGUI countdown;
-    public LevelLoader levelLoader;
+    private LevelLoader levelLoader;
 
     private float time = 3;
 

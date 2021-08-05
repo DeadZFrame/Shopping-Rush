@@ -104,6 +104,19 @@ public class Player : MonoBehaviour
 
                 }
             }
+            if (level.sceneIndex == 0)
+            {
+                if(shoppingListManager.amounts[shoppingListManager.apple] == 0 && shoppingListManager.amounts[shoppingListManager.strawberry] == 0)
+                {
+                    uI.nextLevel.gameObject.SetActive(true);
+                    uI.restartButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    uI.nextLevel.gameObject.SetActive(false);
+                    uI.restartButton.gameObject.SetActive(true);
+                }
+            }
         }
 
         if (other.tag.Equals("Stand"))

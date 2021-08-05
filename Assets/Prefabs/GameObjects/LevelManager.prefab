@@ -48,9 +48,12 @@ MonoBehaviour:
   LevelEnd: {fileID: 0}
   pausePanel: {fileID: 0}
   pauseMenu: {fileID: 0}
-  playButton: {fileID: 0}
   pauseButton: {fileID: 0}
+  restartButton: {fileID: 0}
+  nextLevel: {fileID: 0}
   player: {fileID: 0}
+  countdown: {fileID: 0}
+  levelLoader: {fileID: 0}
 --- !u!114 &2514266587094372775
 MonoBehaviour:
   m_ObjectHideFlags: 0

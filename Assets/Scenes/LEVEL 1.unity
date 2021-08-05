@@ -365,9 +365,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &477806560 stripped
+--- !u!114 &555798836 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2750913852343543924, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5036002629295687481, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
   m_PrefabInstance: {fileID: 2750913852816873364}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -863,6 +863,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2750913851648474425, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
   m_PrefabInstance: {fileID: 2750913852816873364}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1329698141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1401586148402094455, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+  m_PrefabInstance: {fileID: 2750913852816873364}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1357917632
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +949,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b085f174679a98343965a1f2f3ea718c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1451969915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2750913850843933463, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+  m_PrefabInstance: {fileID: 2750913852816873364}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1531819711
@@ -1030,7 +1052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164560253977110521, guid: 6d5b32a5b42fa5d42b95988dcfec1bbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164560253977110521, guid: 6d5b32a5b42fa5d42b95988dcfec1bbc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1594,6 +1616,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2121756880}
     - target: {fileID: 2514266587094372777, guid: 50371467bb2508243a660aca000b3e04, type: 3}
+      propertyPath: countdown
+      value: 
+      objectReference: {fileID: 1329698141}
+    - target: {fileID: 2514266587094372777, guid: 50371467bb2508243a660aca000b3e04, type: 3}
+      propertyPath: nextLevel
+      value: 
+      objectReference: {fileID: 1451969915}
+    - target: {fileID: 2514266587094372777, guid: 50371467bb2508243a660aca000b3e04, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1811810578}
@@ -1606,13 +1636,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 834871407}
     - target: {fileID: 2514266587094372777, guid: 50371467bb2508243a660aca000b3e04, type: 3}
-      propertyPath: playButton
-      value: 
-      objectReference: {fileID: 477806560}
-    - target: {fileID: 2514266587094372777, guid: 50371467bb2508243a660aca000b3e04, type: 3}
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 2112065267}
+    - target: {fileID: 2514266587094372777, guid: 50371467bb2508243a660aca000b3e04, type: 3}
+      propertyPath: restartButton
+      value: 
+      objectReference: {fileID: 555798836}
     - target: {fileID: 2514266587094372778, guid: 50371467bb2508243a660aca000b3e04, type: 3}
       propertyPath: m_Name
       value: LevelManager
