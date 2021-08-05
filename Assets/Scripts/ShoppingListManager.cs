@@ -131,7 +131,7 @@ public class ShoppingListManager : MonoBehaviour
         if (other.name.Equals("Donut"))
         {
             amounts[donut]--;
-            price = 5f;
+            price = 3f;
         }    
         if (other.name.Equals("Breadsticks"))
         {
@@ -153,7 +153,7 @@ public class ShoppingListManager : MonoBehaviour
         if (other.name.Equals("Tomato"))
         {
             amounts[tomato]--;
-            price = 1f;
+            price = 2f;
         }
         if (other.name.Equals("Eggplant"))
         {
@@ -190,7 +190,7 @@ public class ShoppingListManager : MonoBehaviour
         if (other.name.Equals("Watermelon"))
         {
             amounts[waterMelon]--;
-            price = 1f;
+            price = 3f;
         }
         if (other.name.Equals("Blueberries"))
         {
@@ -205,7 +205,7 @@ public class ShoppingListManager : MonoBehaviour
         if (other.name.Equals("Mango"))
         {
             amounts[mango]--;
-            price = 1f;
+            price = 2f;
         }
             
 
@@ -240,7 +240,7 @@ public class ShoppingListManager : MonoBehaviour
             price = 2f;
         }
 
-        if (other.tag.Equals("item"))
+        if (other.tag.Equals("item") || other.tag.Equals("Stand"))
         {
             uI.floatingText.gameObject.SetActive(false);
             uI.floatingText.gameObject.SetActive(true);

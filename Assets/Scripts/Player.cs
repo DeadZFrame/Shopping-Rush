@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public float speed;
     public float smoothSpeed = 0.125f;
     public float delayTime = 1f;
+    public ShoppingListManager shoppingListManager;
 
     private Transform temp; //swipe için temporary deðer
     public GameObject cube;
@@ -43,6 +44,7 @@ public class Player : MonoBehaviour
         level = GameObject.Find("LevelManager").GetComponent<LevelLoader>();
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+        shoppingListManager = FindObjectOfType<ShoppingListManager>();
     }
 
     private void Update()
@@ -84,9 +86,9 @@ public class Player : MonoBehaviour
             {
                 StartCoroutine(DelayAlphaChange(i));
             }
-            
+            shoppingListManager.price = 1f;
         }
-        if(other.tag.Equals("item") && level.sceneIndex==0)
+        if(other.tag.Equals("item") && level.sceneIndex==0 || other.tag.Equals("item") && level.sceneIndex == 1)
         {
             other.gameObject.SetActive(false);
         }
