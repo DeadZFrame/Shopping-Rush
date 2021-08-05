@@ -13,7 +13,7 @@ public class UI_Inventory : MonoBehaviour
 
     public Image[] itemSprite;
     public TextMeshProUGUI[] amount;
-    public TextMeshProUGUI money, infliation;
+    public TextMeshProUGUI money;
     public TextMeshPro floatingText;
     public Image[] tick;
     public int listElements;
@@ -22,7 +22,6 @@ public class UI_Inventory : MonoBehaviour
     {
         shopping = GameObject.Find("Player").GetComponent<ShoppingListManager>();
         money.GetComponent<TextMeshProUGUI>();
-        infliation.GetComponent<TextMeshProUGUI>();
         floatingText.GetComponent<TextMeshPro>();
         for(int i = 0; i< itemSprite.Length; i++)
         {
@@ -38,10 +37,6 @@ public class UI_Inventory : MonoBehaviour
     private void Start()
     {
         ShoppingList();
-        if(levelLoader.sceneIndex==1)
-        {
-            shopping.money = 13f;
-        }
     }
     private void Update()
     {
@@ -83,9 +78,6 @@ public class UI_Inventory : MonoBehaviour
 
         itemSprite[0].gameObject.SetActive(true);
         itemSprite[1].gameObject.SetActive(true);
-
-        
-        infliation.SetText(shopping.infliation + "%");
     }
 
     public void ShoppingListToUI()

@@ -1598,7 +1598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2750913850767222596, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2750913850767222598, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_Color.a
@@ -1614,6 +1614,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2750913850767222598, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2750913850843933461, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2750913851194600954, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
@@ -1663,6 +1667,10 @@ PrefabInstance:
     - target: {fileID: 2750913852343543924, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990693264528584172, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3551667789148551018, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_AnchoredPosition.x
