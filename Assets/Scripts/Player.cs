@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
            
             if (level.sceneIndex == 0)
             {
-                if(shoppingListManager.amounts[shoppingListManager.apple] == 0 && shoppingListManager.amounts[shoppingListManager.strawberry] == 0)
+                if(shoppingListManager.amounts[shoppingListManager.apple] == 0 && shoppingListManager.amounts[shoppingListManager.strawberry] == 0 && shoppingListManager.money >= 0)
                 {
                     uI.nextLevel.gameObject.SetActive(true);
                     uI.restartButton.gameObject.SetActive(false);
@@ -103,37 +103,38 @@ public class Player : MonoBehaviour
                     uI.restartButton.gameObject.SetActive(true);
                 }
             }
-        }
-
-        if (level.sceneIndex == 1)
-        {
-            if (shoppingListManager.amounts[shoppingListManager.potato] == 0 && shoppingListManager.amounts[shoppingListManager.waterMelon] == 0 && shoppingListManager.amounts[shoppingListManager.donut] == 0 && shoppingListManager.money >= 0)
+            if (level.sceneIndex == 1)
             {
-                uI.nextLevel.gameObject.SetActive(true);
-                uI.restartButton.gameObject.SetActive(false);
-            }
-            else
-            {
-                uI.nextLevel.gameObject.SetActive(false);
-                uI.restartButton.gameObject.SetActive(true);
+                if (shoppingListManager.amounts[shoppingListManager.potato] == 0 && shoppingListManager.amounts[shoppingListManager.waterMelon] == 0 && shoppingListManager.amounts[shoppingListManager.donut] == 0 && shoppingListManager.money >= 0)
+                {
+                    uI.nextLevel.gameObject.SetActive(true);
+                    uI.restartButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    uI.nextLevel.gameObject.SetActive(false);
+                    uI.restartButton.gameObject.SetActive(true);
 
+                }
             }
-        }
 
-        if (level.sceneIndex == 2)
-        {
-            if (shoppingListManager.amounts[shoppingListManager.pork] == 0 && shoppingListManager.amounts[shoppingListManager.mango] == 0 && shoppingListManager.amounts[shoppingListManager.coffee] == 0 &&
-                shoppingListManager.amounts[shoppingListManager.milk] == 0 && shoppingListManager.money >= 0)
+            if (level.sceneIndex == 2)
             {
-                uI.nextLevel.gameObject.SetActive(true);
-                uI.restartButton.gameObject.SetActive(false);
-            }
-            else
-            {
-                uI.nextLevel.gameObject.SetActive(false);
-                uI.restartButton.gameObject.SetActive(true);
+                if (shoppingListManager.amounts[shoppingListManager.pork] == 0 && shoppingListManager.amounts[shoppingListManager.mango] == 0 && shoppingListManager.amounts[shoppingListManager.coffee] == 0 &&
+                    shoppingListManager.amounts[shoppingListManager.milk] == 0 && shoppingListManager.money >= 0)
+                {
+                    uI.nextLevel.gameObject.SetActive(true);
+                    uI.restartButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    uI.nextLevel.gameObject.SetActive(false);
+                    uI.restartButton.gameObject.SetActive(true);
 
+                }
             }
+
+        
         }
         if (other.tag.Equals("Stand"))
         {

@@ -6,13 +6,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveSystem
 {
-    public static void SavePlayer(LevelLoader level)
+    public static void SavePlayer(SavePlayer player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.values";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        Playerdata data = new Playerdata(level);
+        Playerdata data = new Playerdata(player);
 
         formatter.Serialize(stream, data);
         stream.Close();

@@ -5,16 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public class Playerdata
 {
-    public int SceneIndex;
-    private LevelLoader level;
+    public int level;
 
-    public Playerdata(LevelLoader level)
+    public Playerdata(SavePlayer player)
     {
-        this.level = level;
+        level = player.level;
     }
 
-    public void PlayerData (LevelLoader level)
-    {
-        SceneIndex = level.sceneIndex;
-    }
+    //public void PlayerData (LevelLoader level)
+    //{
+    //    SceneIndex = level.sceneIndex;
+    //}
 }
