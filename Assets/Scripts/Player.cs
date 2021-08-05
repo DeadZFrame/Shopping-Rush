@@ -86,6 +86,10 @@ public class Player : MonoBehaviour
             }
             
         }
+        if(other.tag.Equals("item") && level.sceneIndex==0)
+        {
+            other.gameObject.SetActive(false);
+        }
     }
 
     public void TouchControls()

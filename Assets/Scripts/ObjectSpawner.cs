@@ -76,25 +76,25 @@ public class ObjectSpawner : MonoBehaviour
             
             if(scene.buildIndex == 0)
             {
-                switch (i)
-                {
-                    case 0: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.apple }); break;
-                    case 1: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.banana }); break;
-                    case 2: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.blueberries }); break;
-                    case 3: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.mango }); break;
-                    case 4: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.strawberry }); break;
-                    case 5: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.waterMelon }); break;
+                //switch (i)
+                //{
+                //    case 0: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.apple }); break;
+                //    case 1: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.banana }); break;
+                //    case 2: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.blueberries }); break;
+                //    case 3: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.mango }); break;
+                //    case 4: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.strawberry }); break;
+                //    case 5: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.waterMelon }); break;
 
-                    case 6: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.tomato }); break;
-                    case 7: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.potato }); break;
-                    case 8: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.onion }); break;
-                    case 9: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.eggplant }); break;
-                    case 10: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.carrot }); break;
-                    case 11: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cabbage }); break;
+                //    case 6: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.tomato }); break;
+                //    case 7: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.potato }); break;
+                //    case 8: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.onion }); break;
+                //    case 9: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.eggplant }); break;
+                //    case 10: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.carrot }); break;
+                //    case 11: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cabbage }); break;
 
-                    default:
-                        break;
-                }
+                //    default:
+                //        break;
+                //}
             }
             else
             {
@@ -169,13 +169,13 @@ public class ObjectSpawner : MonoBehaviour
                 break;
             }
 
-            switch (y)
-            {
-                case 0: StandWorld.SpawnStandWorld(standPosition, new Item { standTypes = Item.StandTypes.fruitStand }); break;
-                case 1: StandWorld.SpawnStandWorld(standPosition, new Item { standTypes = Item.StandTypes.vegetableStand }); break;
-                default:
-                    break;
-            }
+            //switch (y)
+            //{
+            //    case 0: StandWorld.SpawnStandWorld(standPosition, new Item { standTypes = Item.StandTypes.fruitStand }); break;
+            //    case 1: StandWorld.SpawnStandWorld(standPosition, new Item { standTypes = Item.StandTypes.vegetableStand }); break;
+            //    default:
+            //        break;
+            //}
 
             if (y == standSpawnCount - 1 && sameStandSpawnCountControl < sameStandSpawnCount)
             {

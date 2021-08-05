@@ -244,7 +244,7 @@ public class ShoppingListManager : MonoBehaviour
         {
             uI.floatingText.gameObject.SetActive(false);
             uI.floatingText.gameObject.SetActive(true);
-            uI.floatingText.SetText("-" + price.ToString());
+            uI.floatingText.SetText("-$" + price.ToString());
         }
         money -= price;
         price = 0f;
