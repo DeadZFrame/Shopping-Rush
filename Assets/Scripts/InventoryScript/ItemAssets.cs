@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemAssets : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class ItemAssets : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        for(int i = 0; i < sprites.Length; i++)
+        {
+            //sprites[i] = GetComponent<Sprite>();
+        }
     }
 
     public Transform itemWorld;
@@ -21,4 +27,6 @@ public class ItemAssets : MonoBehaviour
     public GameObject[] flour;
     public GameObject[] drinks;
     public GameObject[] stands;
+
+    public Sprite[] sprites;
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Serializable]
 public class Item
@@ -20,6 +21,7 @@ public class Item
     {
         drinkFridge, fruitStand, meatStand, milkFridge, vegetableStand, flourStand
     }
+
     public ItemTypes itemTypes;
     public StandTypes standTypes;
 

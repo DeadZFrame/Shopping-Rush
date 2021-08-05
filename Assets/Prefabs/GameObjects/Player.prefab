@@ -1427,7 +1427,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4714303369949012845}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f267bbe7d38f95445884333668dd64dc, type: 2}
   m_CullingMode: 0
@@ -1453,7 +1453,7 @@ MonoBehaviour:
   speed: 10
   smoothSpeed: 0.2
   delayTime: 0.2
-  cube: {fileID: 0}
+  cube: {fileID: 5053491427987942488}
   uiInventory: {fileID: 0}
 --- !u!114 &5597402735758219603
 MonoBehaviour:
@@ -2021,7 +2021,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190297
+    rgba: 3825205465
   m_fontColor: {r: 0.8490566, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

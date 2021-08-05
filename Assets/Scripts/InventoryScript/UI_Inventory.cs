@@ -8,8 +8,9 @@ public class UI_Inventory : MonoBehaviour
 {
     private Inventory inventory;
     private ShoppingListManager shopping;
+    private ItemAssets itemAssets;
 
-    public TextMeshProUGUI[] itemName;
+    public Image[] itemSprite;
     public TextMeshProUGUI[] amount;
     public TextMeshProUGUI money, infliation;
     public TextMeshPro floatingText;
@@ -22,9 +23,10 @@ public class UI_Inventory : MonoBehaviour
         money.GetComponent<TextMeshProUGUI>();
         infliation.GetComponent<TextMeshProUGUI>();
         floatingText.GetComponent<TextMeshPro>();
-        for(int i = 0; i<itemName.Length; i++)
+        for(int i = 0; i< itemSprite.Length; i++)
         {
-            itemName[i].GetComponent<TextMeshProUGUI>();
+            itemSprite[i].GetComponent<Sprite>();
+            itemSprite[i].GetComponent<Image>();
             amount[i].GetComponent<TextMeshProUGUI>();
             tick[i].GetComponent<Image>();
         }
@@ -45,26 +47,39 @@ public class UI_Inventory : MonoBehaviour
         this.inventory = inventory;
     }
 
+    public void SetIteMAssets(ItemAssets itemAssets)
+    {
+        this.itemAssets = itemAssets;
+    }
+
     public void ShoppingList()
     {
         shopping.amounts[shopping.apple] = 1;
         shopping.amounts[shopping.cabbage] = 1;
         shopping.amounts[shopping.strawberry] = 1;
 
-        itemName[0].gameObject.SetActive(true);
-        itemName[1].gameObject.SetActive(true);
-        itemName[2].gameObject.SetActive(true);
+        itemSprite[0].gameObject.SetActive(true);
+        itemSprite[1].gameObject.SetActive(true);
+        itemSprite[2].gameObject.SetActive(true);
 
-        itemName[0].SetText("Apple");
-        itemName[1].SetText("Cabbage");
-        itemName[2].SetText("Strawberry");
+        //itemSprite[0].sprite = itemAssets.sprites[shopping.apple];
+        //itemSprite[1].sprite = itemAssets.sprites[shopping.cabbage];
+        //itemSprite[2].sprite = itemAssets.sprites[shopping.strawberry];
 
-        shopping.money = 10f;
+        shopping.money = 2f;
         infliation.SetText(shopping.infliation + "%");
     }
 
     public void ShoppingListToUI()
     {
+        if(shopping.money < 0)
+        {
+            money.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            money.color = new Color(0, 255, 0);
+        }
         money.SetText("$" + shopping.money);
 
 
@@ -96,13 +111,6 @@ public class UI_Inventory : MonoBehaviour
         {
             amount[3].gameObject.SetActive(false);
             tick[3].enabled = true;
-        }
-        if (shopping.amounts[shopping.strawberry] > 0)
-            amount[4].SetText(shopping.amounts[shopping.strawberry].ToString());
-        else
-        {
-            amount[4].gameObject.SetActive(false);
-            tick[4].enabled = true;
         }
     }
 }

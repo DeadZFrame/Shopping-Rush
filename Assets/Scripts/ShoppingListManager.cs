@@ -36,7 +36,7 @@ public class ShoppingListManager : MonoBehaviour
         steak = 0; bacon = 1; egg = 2; chicken = 3; pork = 4; sausage = 5;
         coke = 6; coffee = 7; iceTea = 8; water = 9; soda = 10; energyDrink = 11;
         flour = 12; bread = 13; cookie = 14; donut = 15; breadSticks = 16; cupcake = 17;
-        cabbage = 18; tomato = 19; eggplant = 20; carrot = 21; onion = 22; potato = 24;
+        cabbage = 18; tomato = 19; eggplant = 20; carrot = 21; onion = 22; potato = 23;
         apple = 24; banana = 25; waterMelon = 26; blueberries = 27; strawberry = 28; mango = 29;
         milk = 30; chocolateMilk = 31; cheese = 32; iceCream = 33; fruitYogurt = 34; puding = 35;
     }
