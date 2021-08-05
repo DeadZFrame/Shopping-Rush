@@ -847,17 +847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e9ecfe5fe8504d44896195fe471458e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1177709288 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2514266587094372775, guid: 50371467bb2508243a660aca000b3e04, type: 3}
-  m_PrefabInstance: {fileID: 2514266586053262159}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c997127a793c30248a9a3d645e5392d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1273801389 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2750913851648474425, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
@@ -1879,7 +1868,15 @@ PrefabInstance:
     - target: {fileID: 2750913850843933463, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1177709288}
+      objectReference: {fileID: 1177709286}
+    - target: {fileID: 2750913850843933463, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2750913850843933463, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NextLevelUI, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2750913850948182376, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2111,6 +2108,18 @@ PrefabInstance:
     - target: {fileID: 4163840795787984607, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 169.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036002629295687481, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2514266587094372777, guid: 50371467bb2508243a660aca000b3e04, type: 3}
+    - target: {fileID: 5036002629295687481, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Reload
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036002629295687481, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NextLevelUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5510466350693481522, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_SizeDelta.x
