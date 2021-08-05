@@ -20,16 +20,12 @@ public class LevelLoader : MonoBehaviour
 
     private void Awake()
     {
+        save = GameObject.Find("LevelManager").GetComponent<SavePlayer>();
         save.LoadPlayer();
     }
 
     public void LoadLevel()
     {
         SceneManager.LoadScene(sceneIndex);
-    }
-
-    public void SetSave(SavePlayer save)
-    {
-        this.save = save;
     }
 }

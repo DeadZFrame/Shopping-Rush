@@ -109,7 +109,7 @@ public class UI_Inventory : MonoBehaviour
                 tick[1].enabled = true;
             }
         }
-        if (levelLoader.sceneIndex == 1)
+        else if (levelLoader.sceneIndex == 1)
         {
             if (shopping.amounts[shopping.potato] > 0)
                 amount[0].SetText("x" + shopping.amounts[shopping.potato].ToString());
@@ -134,7 +134,7 @@ public class UI_Inventory : MonoBehaviour
                 tick[2].enabled = true;
             }
         }
-        if (levelLoader.sceneIndex == 2)
+        else if (levelLoader.sceneIndex == 2)
         {
             if (shopping.amounts[shopping.pork] > 0)
                 amount[0].SetText("x" + shopping.amounts[shopping.pork].ToString());
