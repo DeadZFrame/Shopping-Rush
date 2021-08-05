@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     public float speed;
     public float smoothSpeed = 0.125f;
     public float delayTime = 1f;
+    public ShoppingListManager shoppingListManager;
+    public UI_Inventory uI_Inventory;
 
     private Transform temp; //swipe için temporary deðer
     public GameObject cube;
@@ -43,6 +45,7 @@ public class Player : MonoBehaviour
         level = GameObject.Find("LevelManager").GetComponent<LevelLoader>();
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+        shoppingListManager = FindObjectOfType<ShoppingListManager>();
     }
 
     private void Update()
@@ -73,9 +76,34 @@ public class Player : MonoBehaviour
         if (other.name.Equals("Finish"))
         {
             FindObjectOfType<AudioManager>().Play("kaching");
-            level.sceneIndex++;
+            
             uI.LevelEnd.SetActive(true);
             Time.timeScale = 0;
+            //if(shoppingListManager.money<0)
+            //{
+            //    uI.nextLevel.gameObject.SetActive(false);
+            //    uI.restartButton.gameObject.SetActive(true);
+            //}
+            //else
+            //{
+            //    uI.nextLevel.gameObject.SetActive(true);
+            //    uI.restartButton.gameObject.SetActive(false);
+            //    level.sceneIndex++;
+            //}
+           if(level.sceneIndex==1)
+            {
+                if(shoppingListManager.amounts[shoppingListManager.potato] == 0 && shoppingListManager.amounts[shoppingListManager.waterMelon] == 0 && shoppingListManager.amounts[shoppingListManager.donut] == 0 && shoppingListManager.money >= 0)
+                {
+                    uI.nextLevel.gameObject.SetActive(true);
+                    uI.restartButton.gameObject.SetActive(false);  
+                }
+                else
+                {
+                    uI.nextLevel.gameObject.SetActive(false);
+                    uI.restartButton.gameObject.SetActive(true);
+
+                }
+            }
         }
 
         if (other.tag.Equals("Stand"))
@@ -84,9 +112,9 @@ public class Player : MonoBehaviour
             {
                 StartCoroutine(DelayAlphaChange(i));
             }
-            
+            shoppingListManager.price = 1f;
         }
-        if(other.tag.Equals("item") && level.sceneIndex==0)
+        if(other.tag.Equals("item") && level.sceneIndex==0 || other.tag.Equals("item") && level.sceneIndex == 1)
         {
             other.gameObject.SetActive(false);
         }

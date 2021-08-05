@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class NextLevelUI : MonoBehaviour
 {
     public GameObject levelStart, LevelEnd, pausePanel, pauseMenu;
-    public Button playButton, pauseButton;
+    public Button pauseButton;
+    public Button restartButton,nextLevel;
     public Animator player;
+    public TextMeshProUGUI countdown;
+    public LevelLoader levelLoader;
+
+    private float time = 3;
 
     private void Awake()
     {
         levelStart.GetComponent<Animator>();
         levelStart.SetActive(true);
+        levelLoader = FindObjectOfType<LevelLoader>();
     }
 
     private void Start()
@@ -22,12 +29,27 @@ public class NextLevelUI : MonoBehaviour
         StartCoroutine(Break(2f));
     }
 
-    public void PlayButton()
+    private void FixedUpdate()
     {
-        levelStart.SetActive(false);
-        playButton.gameObject.SetActive(false);
-        player.enabled = true;
-        pauseButton.gameObject.SetActive(true);
+        Play();
+    }
+
+    public void Play()
+    {
+        if (time >= 0)
+        {
+            time -= Time.deltaTime;
+            countdown.SetText(time.ToString("0"));
+        }
+        else
+        {
+            countdown.SetText("GO!");
+            StartCoroutine(SetFalse(0.5f));
+            levelStart.gameObject.SetActive(false);
+            player.enabled = true;
+            pauseButton.gameObject.SetActive(true);
+        }
+        
     }
 
     public void Pause()
@@ -56,17 +78,28 @@ public class NextLevelUI : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+    
+    public void toNextLevel()
+    {
+        levelLoader.sceneIndex++;
+        SceneManager.LoadScene(levelLoader.sceneIndex);
+    }
 
     IEnumerator Delay(float time)
     {
         yield return new WaitForSeconds(time);
         levelStart.GetComponent<Animator>().enabled = true;
-        playButton.gameObject.SetActive(true);
     }
 
-    IEnumerator Break(float time) 
+    IEnumerator Break(float time)
     {
         yield return new WaitForSeconds(time);
         levelStart.GetComponent<Animator>().enabled = false;
+    }
+
+    IEnumerator SetFalse(float time)
+    {
+        yield return new WaitForSeconds(time);
+        countdown.gameObject.SetActive(false);
     }
 }

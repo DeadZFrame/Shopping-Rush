@@ -38,8 +38,11 @@ public class UI_Inventory : MonoBehaviour
     private void Start()
     {
         ShoppingList();
+        if(levelLoader.sceneIndex==1)
+        {
+            shopping.money = 13f;
+        }
     }
-
     private void Update()
     {
         ShoppingListToUI();
@@ -56,20 +59,32 @@ public class UI_Inventory : MonoBehaviour
     }
     public void ShoppingList()
     {
+        if (levelLoader.sceneIndex == 0)
+        {
+            shopping.amounts[shopping.apple] = 2;
+            shopping.amounts[shopping.strawberry] = 1;
+
+            itemSprite[0].gameObject.SetActive(true);
+            itemSprite[1].gameObject.SetActive(true);
+
+            shopping.money = 6f;
+        }
+        if (levelLoader.sceneIndex == 1)
+        {
+            shopping.amounts[shopping.potato] = 2;
+            shopping.amounts[shopping.waterMelon] = 1;
+            shopping.amounts[shopping.donut] = 2;
+
+            shopping.money = 15f;
+        }
         shopping.amounts[shopping.apple] = 2;
         shopping.amounts[shopping.strawberry] = 1;
-        //shopping.amounts[shopping.cabbage] = 1;
 
 
         itemSprite[0].gameObject.SetActive(true);
         itemSprite[1].gameObject.SetActive(true);
-        //itemSprite[2].gameObject.SetActive(true);
 
-        //itemSprite[0].sprite = itemAssets.sprites[shopping.apple];
-        //itemSprite[1].sprite = itemAssets.sprites[shopping.cabbage];
-        //itemSprite[2].sprite = itemAssets.sprites[shopping.strawberry];
-
-        shopping.money = 6f;
+        
         infliation.SetText(shopping.infliation + "%");
     }
 
@@ -101,6 +116,31 @@ public class UI_Inventory : MonoBehaviour
             {
                 amount[1].gameObject.SetActive(false);
                 tick[1].enabled = true;
+            }
+        }
+        if (levelLoader.sceneIndex == 1)
+        {
+            if (shopping.amounts[shopping.potato] > 0)
+                amount[0].SetText("x" + shopping.amounts[shopping.potato].ToString());
+            else
+            {
+                amount[0].gameObject.SetActive(false);
+                tick[0].enabled = true;
+            }
+
+            if (shopping.amounts[shopping.waterMelon] > 0)
+                amount[1].SetText("x" + shopping.amounts[shopping.waterMelon].ToString());
+            else
+            {
+                amount[1].gameObject.SetActive(false);
+                tick[1].enabled = true;
+            }
+            if (shopping.amounts[shopping.donut] > 0)
+                amount[2].SetText("x" + shopping.amounts[shopping.donut].ToString());
+            else
+            {
+                amount[2].gameObject.SetActive(false);
+                tick[2].enabled = true;
             }
         }
         else
