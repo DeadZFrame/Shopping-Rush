@@ -15,8 +15,7 @@ public class Player : MonoBehaviour
     public float speed;
     public float smoothSpeed = 0.125f;
     public float delayTime = 1f;
-    public ShoppingListManager shoppingListManager;
-    public UI_Inventory uI_Inventory;
+    ShoppingListManager shoppingListManager;
 
     private Transform temp; //swipe için temporary deðer
     public GameObject cube;

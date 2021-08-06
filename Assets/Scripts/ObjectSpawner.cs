@@ -74,7 +74,7 @@ public class ObjectSpawner : MonoBehaviour
                 break;
             }
             
-            if(scene.buildIndex == 3)
+            if(scene.buildIndex == 4)
             {
                 switch (i)
                 {
@@ -107,6 +107,36 @@ public class ObjectSpawner : MonoBehaviour
                         break;
                 }
             }
+
+            if(scene.buildIndex == 3)
+            {
+                switch (i)
+                {
+                    case 0: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.blueberries }); break;
+                    case 1: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.apple }); break;
+                    case 2: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.waterMelon }); break;
+                    case 3: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.banana }); break;
+
+                    case 4: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.water }); break;
+                    case 5: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.energyDrink }); break;
+                    case 6: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.coke }); break;
+                    case 7: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.iceTea }); break;
+
+                    case 8: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.milk }); break;
+                    case 9: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.iceCream }); break;
+                    case 10: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.chocolateMilk }); break;
+                    case 11: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cheese }); break;
+
+                    case 12: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.breadSticks }); break;
+                    case 13: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cookie }); break;
+                    case 14: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.cupcake }); break;
+                    case 15: ItemWorld.SpawnItemWorld(position, new Item { itemTypes = Item.ItemTypes.flourSack }); break;
+
+                    default:
+                        break;
+                }
+            }
+
             else
             {
                 //switch (i)

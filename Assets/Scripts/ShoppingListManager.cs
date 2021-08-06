@@ -192,7 +192,7 @@ public class ShoppingListManager : MonoBehaviour
             amounts[waterMelon]--;
             price = 3f;
         }
-        if (other.name.Equals("Blueberries"))
+        if (other.name.Equals("Blueberry"))
         {
             amounts[blueberries]--;
             price = 1f;
