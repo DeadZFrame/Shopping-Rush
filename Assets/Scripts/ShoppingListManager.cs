@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ShoppingListManager : MonoBehaviour
 {
-    [SerializeField] private UI_Inventory uI;
+    private UI_Inventory uI;
+    private LevelLoader levelLoader;
 
     [System.NonSerialized] public int[] amounts;
 
@@ -20,10 +21,17 @@ public class ShoppingListManager : MonoBehaviour
 
     [System.NonSerialized] public float money, infliation, price;
 
+    private void Awake()
+    {
+        levelLoader = GameObject.Find("LevelManager").GetComponent<LevelLoader>();
+        uI = FindObjectOfType<UI_Inventory>();
+    }
+
     private void Start()
     {
         amounts = new int[setamounts.Length];
         Initialize();
+        ShoppingList();
     }
 
     public void Initialize()
@@ -41,9 +49,47 @@ public class ShoppingListManager : MonoBehaviour
         milk = 30; chocolateMilk = 31; cheese = 32; iceCream = 33; fruitYogurt = 34; puding = 35;
     }
 
-    public void SetUI(UI_Inventory uI)
+    public void ShoppingList()
     {
-        this.uI = uI;
+        if (levelLoader.sceneIndex == 0)
+        {
+            amounts[apple] = 2;
+            amounts[strawberry] = 1;
+            money = 6f;
+        }
+        if (levelLoader.sceneIndex == 1)
+        {
+            amounts[potato] = 2;
+            amounts[waterMelon] = 1;
+            amounts[donut] = 2;
+
+            money = 15f;
+        }
+        if (levelLoader.sceneIndex == 2)
+        {
+            amounts[pork] = 2;
+            amounts[mango] = 1;
+            amounts[coffee] = 1;
+            amounts[milk] = 2;
+
+            money = 24f;
+        }
+        if (levelLoader.sceneIndex == 3)
+        {
+            amounts[energyDrink] = 1;
+            amounts[cookie] = 1;
+            amounts[blueberries] = 1;
+            amounts[cheese] = 2;
+            money = 16f;
+        }
+        if (levelLoader.sceneIndex == 4)
+        {
+            amounts[coke] = 2;
+            amounts[cupcake] = 1;
+            amounts[onion] = 2;
+            amounts[chicken] = 1;
+            money = 22f;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

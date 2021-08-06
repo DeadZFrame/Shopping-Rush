@@ -20,10 +20,10 @@ public class UI_Inventory : MonoBehaviour
 
     private void Awake()
     {
-        shopping = GameObject.Find("Player").GetComponent<ShoppingListManager>();
         money.GetComponent<TextMeshProUGUI>();
         floatingText.GetComponent<TextMeshPro>();
-        for(int i = 0; i< itemSprite.Length; i++)
+        shopping = FindObjectOfType<ShoppingListManager>();
+        for (int i = 0; i< itemSprite.Length; i++)
         {
             itemSprite[i].GetComponent<Sprite>();
             itemSprite[i].GetComponent<Image>();
@@ -34,10 +34,6 @@ public class UI_Inventory : MonoBehaviour
 
     }
 
-    private void Start()
-    {
-        ShoppingList();
-    }
     private void Update()
     {
         ShoppingListToUI();
@@ -46,48 +42,6 @@ public class UI_Inventory : MonoBehaviour
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
-    }
-    public void ShoppingList()
-    {
-        if (levelLoader.sceneIndex == 0)
-        {
-            shopping.amounts[shopping.apple] = 2;
-            shopping.amounts[shopping.strawberry] = 1;
-            shopping.money = 6f;
-        }
-        if (levelLoader.sceneIndex == 1)
-        {
-            shopping.amounts[shopping.potato] = 2;
-            shopping.amounts[shopping.waterMelon] = 1;
-            shopping.amounts[shopping.donut] = 2;
-
-            shopping.money = 15f;
-        }
-        if (levelLoader.sceneIndex == 2)
-        {
-            shopping.amounts[shopping.pork] = 2;
-            shopping.amounts[shopping.mango] = 1;
-            shopping.amounts[shopping.coffee] = 1;
-            shopping.amounts[shopping.milk] = 2;
-
-            shopping.money = 24f;
-        }
-        if(levelLoader.sceneIndex == 3)
-        {
-            shopping.amounts[shopping.energyDrink] = 1;
-            shopping.amounts[shopping.cookie] = 1;
-            shopping.amounts[shopping.blueberries] = 1;
-            shopping.amounts[shopping.cheese] = 2;
-            shopping.money = 16f;
-        }
-        if (levelLoader.sceneIndex == 4)
-        {
-            shopping.amounts[shopping.coke] = 2;
-            shopping.amounts[shopping.cupcake] = 1;
-            shopping.amounts[shopping.onion] = 2;
-            shopping.amounts[shopping.chicken] = 1;
-            shopping.money = 22f;
-        }
     }
 
     public void ShoppingListToUI()
