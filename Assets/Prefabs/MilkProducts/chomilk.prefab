@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 949523868424250733}
   m_Layer: 0
   m_Name: chomilk
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138903549188782296}
-  m_LocalRotation: {x: 0.3829042, y: 0.6934681, z: -0.13820986, w: 0.59446144}
+  m_LocalRotation: {x: 0.38290453, y: 0.69346946, z: -0.13821413, w: 0.59445864}
   m_LocalPosition: {x: -9.2273445, y: 0.55074733, z: -2.2102208}
   m_LocalScale: {x: 19.982985, y: 49.95746, z: 15.986387}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 12.794, y: 95.136, z: 22.091}
+  m_LocalEulerAnglesHint: {x: 40.311, y: 109.539, z: 28.747}
 --- !u!33 &402049486580313543
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138903549188782296}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.038825568, y: 0.020227246, z: 0.035068493}

@@ -38,6 +38,14 @@ public class UI_Inventory : MonoBehaviour
     {
         ShoppingList();
     }
+    private void OnLevelWasLoaded(int level)
+    {
+        level = levelLoader.sceneIndex;
+        if(level==0 || level==1 || level == 2 || level == 3|| level == 4)
+        {
+            shopping = FindObjectOfType<ShoppingListManager>();
+        }
+    }
     private void Update()
     {
         ShoppingListToUI();
@@ -55,7 +63,7 @@ public class UI_Inventory : MonoBehaviour
             shopping.amounts[shopping.strawberry] = 1;
             shopping.money = 6f;
         }
-        if (levelLoader.sceneIndex == 1)
+        else if (levelLoader.sceneIndex == 1)
         {
             shopping.amounts[shopping.potato] = 2;
             shopping.amounts[shopping.waterMelon] = 1;
@@ -63,7 +71,7 @@ public class UI_Inventory : MonoBehaviour
 
             shopping.money = 15f;
         }
-        if (levelLoader.sceneIndex == 2)
+        else if(levelLoader.sceneIndex == 2)
         {
             shopping.amounts[shopping.pork] = 2;
             shopping.amounts[shopping.mango] = 1;
@@ -72,7 +80,7 @@ public class UI_Inventory : MonoBehaviour
 
             shopping.money = 24f;
         }
-        if(levelLoader.sceneIndex == 3)
+        else if(levelLoader.sceneIndex == 3)
         {
             shopping.amounts[shopping.energyDrink] = 1;
             shopping.amounts[shopping.cookie] = 1;
@@ -80,7 +88,7 @@ public class UI_Inventory : MonoBehaviour
             shopping.amounts[shopping.cheese] = 2;
             shopping.money = 16f;
         }
-        if (levelLoader.sceneIndex == 4)
+        else if(levelLoader.sceneIndex == 4)
         {
             shopping.amounts[shopping.coke] = 2;
             shopping.amounts[shopping.cupcake] = 1;

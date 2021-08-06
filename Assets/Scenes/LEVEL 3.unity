@@ -792,17 +792,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5017258381990989664, guid: 6ba32f996ee8f4047b86c0c61ff6acd0, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7131310147833710065, guid: 6ba32f996ee8f4047b86c0c61ff6acd0, type: 3}
       propertyPath: m_Name
-      value: Energydrink
-      objectReference: {fileID: 0}
-    - target: {fileID: 7131310147833710065, guid: 6ba32f996ee8f4047b86c0c61ff6acd0, type: 3}
-      propertyPath: m_TagString
-      value: item
+      value: Energy Drink
       objectReference: {fileID: 0}
     - target: {fileID: 7619053074165014347, guid: 6ba32f996ee8f4047b86c0c61ff6acd0, type: 3}
       propertyPath: m_RootOrder
@@ -2376,10 +2368,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 949523868424250733, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3619634566814261858, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2426,11 +2414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4138903549188782296, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
       propertyPath: m_Name
-      value: Chomilk
-      objectReference: {fileID: 0}
-    - target: {fileID: 4138903549188782296, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
-      propertyPath: m_TagString
-      value: item
+      value: Chocolate Milk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
@@ -2441,10 +2425,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 949523868424250733, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3619634566814261858, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2491,11 +2471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4138903549188782296, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
       propertyPath: m_Name
-      value: Chomilk
-      objectReference: {fileID: 0}
-    - target: {fileID: 4138903549188782296, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
-      propertyPath: m_TagString
-      value: item
+      value: Chocolate Milk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd6617f21c13a4d41af37897c7cd31c4, type: 3}
@@ -3692,15 +3668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3196827918493859628, guid: 2754258bc1be4ec4dbe188c74211c2e3, type: 3}
       propertyPath: m_Name
-      value: Icetea
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196827918493859628, guid: 2754258bc1be4ec4dbe188c74211c2e3, type: 3}
-      propertyPath: m_TagString
-      value: item
-      objectReference: {fileID: 0}
-    - target: {fileID: 6717137136517374979, guid: 2754258bc1be4ec4dbe188c74211c2e3, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+      value: Ice Tea
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2754258bc1be4ec4dbe188c74211c2e3, type: 3}
