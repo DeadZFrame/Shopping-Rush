@@ -1869,14 +1869,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1177709286}
-    - target: {fileID: 2750913850843933463, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: toNextLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2750913850843933463, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: NextLevelUI, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2750913850948182376, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_IsActive
       value: 1

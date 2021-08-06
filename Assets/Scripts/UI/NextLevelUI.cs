@@ -14,6 +14,8 @@ public class NextLevelUI : MonoBehaviour
     public TextMeshProUGUI countdown;
     private LevelLoader levelLoader;
 
+    Scene scene;
+
     private float time = 3;
 
     private void Awake()
@@ -21,10 +23,12 @@ public class NextLevelUI : MonoBehaviour
         levelStart.GetComponent<Animator>();
         levelStart.SetActive(true);
         levelLoader = FindObjectOfType<LevelLoader>();
+        
     }
 
     private void Start()
     {
+        scene = SceneManager.GetActiveScene();
         StartCoroutine(Delay(1f));
         StartCoroutine(Break(2f));
     }
@@ -81,8 +85,7 @@ public class NextLevelUI : MonoBehaviour
     
     public void toNextLevel()
     {
-        levelLoader.sceneIndex++;
-        SceneManager.LoadScene(levelLoader.sceneIndex);
+        SceneManager.LoadScene(scene.buildIndex+1);
     }
 
     IEnumerator Delay(float time)

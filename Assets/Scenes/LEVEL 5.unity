@@ -270,7 +270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2514266587094372775, guid: 50371467bb2508243a660aca000b3e04, type: 3}
       propertyPath: sceneIndex
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2514266587094372776, guid: 50371467bb2508243a660aca000b3e04, type: 3}
       propertyPath: m_RootOrder
@@ -782,6 +782,14 @@ PrefabInstance:
     - target: {fileID: 2750913850843933461, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2750913850843933463, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1692758238}
+    - target: {fileID: 2750913850843933463, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toNextLevel
       objectReference: {fileID: 0}
     - target: {fileID: 2750913851194600954, guid: 8dde745dea39e2545b6e444b0c737848, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
