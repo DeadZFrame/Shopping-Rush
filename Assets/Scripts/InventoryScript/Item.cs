@@ -19,7 +19,8 @@ public class Item
 
     public enum StandTypes
     {
-        drinkFridge, fruitStand, meatStand, milkFridge, vegetableStand, flourStand
+        drinkFridge, fruitStand, meatStand, milkFridge, vegetableStand, flourStand,
+        blueMan, forklift, crate
     }
 
     public ItemTypes itemTypes;
@@ -80,6 +81,9 @@ public class Item
             case StandTypes.milkFridge: return ItemAssets.Instance.stands[3];
             case StandTypes.vegetableStand: return ItemAssets.Instance.stands[4];
             case StandTypes.flourStand: return ItemAssets.Instance.stands[5];
+            case StandTypes.blueMan: return ItemAssets.Instance.obstacles[0];
+            case StandTypes.forklift: return ItemAssets.Instance.obstacles[1];
+            case StandTypes.crate: return ItemAssets.Instance.obstacles[2];
         }
     }
 }

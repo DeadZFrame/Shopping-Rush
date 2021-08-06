@@ -111,10 +111,10 @@ MonoBehaviour:
   - {fileID: 7131310147833710065, guid: 6ba32f996ee8f4047b86c0c61ff6acd0, type: 3}
   stands:
   - {fileID: 9207527309419860076, guid: c4ccab21c0b5c41418dfccca80b45aa3, type: 3}
-  - {fileID: 4312745133765018049, guid: bd4958c5f971f1d4d9afcbba3ab7da7f, type: 3}
+  - {fileID: 2628066302546586346, guid: bd4958c5f971f1d4d9afcbba3ab7da7f, type: 3}
   - {fileID: 4472500339325487983, guid: 87c5774fb2605204887148ea28d94114, type: 3}
   - {fileID: 31588383647580673, guid: 89c4ca62739ea2d46ab9e7ff078f898b, type: 3}
-  - {fileID: 5452302966513964048, guid: d0d2bd859ee0de146acd9d8d1c778ff8, type: 3}
+  - {fileID: 8316790229530341923, guid: d0d2bd859ee0de146acd9d8d1c778ff8, type: 3}
   - {fileID: 1670821947883267282, guid: de5461c112f1e5f44ae8aed5fc04a7e6, type: 3}
   sprites:
   - {fileID: 21300000, guid: 2fe880a0f3996b74a886ab416afeb7da, type: 3}
@@ -153,3 +153,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 40517ecedbe8f3a44a0b4d20a8b087ba, type: 3}
   - {fileID: 21300000, guid: 2cbe5c1ce75c27a49a774ba5fc1ee979, type: 3}
   - {fileID: 21300000, guid: 937bdd008af8dfd4da39bd49a751e715, type: 3}
+  obstacles:
+  - {fileID: 7172071047162189634, guid: f4e85ad0fbcbfab4fbc6e211c60414d9, type: 3}
+  - {fileID: 8874216429522573025, guid: 88025aa42e1aa2e42a48d88875ee7ddb, type: 3}
+  - {fileID: 4507403002437743592, guid: 38ebd6ff306d7a049b262965be7e61ee, type: 3}

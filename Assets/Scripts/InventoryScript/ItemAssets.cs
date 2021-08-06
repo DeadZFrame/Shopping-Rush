@@ -29,4 +29,6 @@ public class ItemAssets : MonoBehaviour
     public GameObject[] stands;
 
     public Sprite[] sprites;
+
+    public GameObject[] obstacles;
 }

@@ -133,8 +133,38 @@ public class Player : MonoBehaviour
 
                 }
             }
+            if (level.sceneIndex == 3)
+            {
+                if (shoppingListManager.amounts[shoppingListManager.energyDrink] == 0 && shoppingListManager.amounts[shoppingListManager.cookie] == 0 && shoppingListManager.amounts[shoppingListManager.blueberries] == 0 &&
+                    shoppingListManager.amounts[shoppingListManager.cheese] == 0 && shoppingListManager.money >= 0)
+                {
+                    uI.nextLevel.gameObject.SetActive(true);
+                    uI.restartButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    uI.nextLevel.gameObject.SetActive(false);
+                    uI.restartButton.gameObject.SetActive(true);
 
-        
+                }
+            }
+            if (level.sceneIndex == 4)
+            {
+                if (shoppingListManager.amounts[shoppingListManager.coke] == 0 && shoppingListManager.amounts[shoppingListManager.cupcake] == 0 && shoppingListManager.amounts[shoppingListManager.onion] == 0 &&
+                    shoppingListManager.amounts[shoppingListManager.chicken] == 0 && shoppingListManager.money >= 0)
+                {
+                    uI.nextLevel.gameObject.SetActive(true);
+                    uI.restartButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    uI.nextLevel.gameObject.SetActive(false);
+                    uI.restartButton.gameObject.SetActive(true);
+
+                }
+            }
+
+
         }
         if (other.tag.Equals("Stand"))
         {

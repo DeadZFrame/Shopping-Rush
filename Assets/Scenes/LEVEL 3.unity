@@ -522,7 +522,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2514266587094372775, guid: 50371467bb2508243a660aca000b3e04, type: 3}
       propertyPath: sceneIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2514266587094372776, guid: 50371467bb2508243a660aca000b3e04, type: 3}
       propertyPath: m_RootOrder
@@ -4164,19 +4164,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2514266587094372778, guid: 50371467bb2508243a660aca000b3e04, type: 3}
   m_PrefabInstance: {fileID: 333039096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2086867110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086867107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bcbf5282e889b44dbda0b714faea28e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 0
 --- !u!4 &2107936548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4416661972568389812, guid: 31a4902f51d8f8f4692058e0ae90d27d, type: 3}

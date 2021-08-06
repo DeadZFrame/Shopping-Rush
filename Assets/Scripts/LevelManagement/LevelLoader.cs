@@ -18,6 +18,11 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+    private void OnApplicationQuit()
+    {
+        save.Save();
+    }
+
     private void Awake()
     {
         save = GameObject.Find("LevelManager").GetComponent<SavePlayer>();
